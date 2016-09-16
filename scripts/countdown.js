@@ -1,4 +1,4 @@
-var timer = function () {
+var Timer = function () {
   var _time = 0;
   var _countdown;
 

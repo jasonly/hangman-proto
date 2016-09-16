@@ -1,8 +1,6 @@
-// Set timer
-// var thing = new timer();
-// thing.setTime(10);
-// thing.init();
+var timer = new Timer();
+var game = new Hangman();
 
-// Set game
-var hm = new hangman();
-hm.init();
+// timer.setTime(10);
+// timer.init();
+game.init();

@@ -1,7 +1,20 @@
-.work-board
+.work-board {
+  margin:  0 auto;
+  width:  400px;
+  display:  flex;
+  flex-direction: column;
+}
 
 .board {
-	display: flex;
+  display: flex;
+  justify-content: center;
+}
+
+.countdown-clock {
+  height:  100px;
+  width:  200px;
+  margin: 0 auto;
+  border: 1px solid gray;
 }
 
 .letter-box {

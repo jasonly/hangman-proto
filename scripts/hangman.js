@@ -1,4 +1,4 @@
-var hangman = function () {
+var Hangman = function () {
   var _dictionary = ['fatty', 'club', 'eat', 'food'];
   var _word = '';
   var _wordArr = [];
@@ -53,6 +53,7 @@ var hangman = function () {
   // click on div prompt a letter then go through logic
   var _listeners = function() {
     var boxes;
+
     _setWord();
     _makeBoxes();
 
