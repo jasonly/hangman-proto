@@ -1,0 +1,22 @@
+{
+  "name": "hangman-proto",
+  "version": "1.0.0",
+  "description": "hangman",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "mkdir dist",
+    "build": "sass styles/styles.scss dist/styles.css",
+    "watch": "sass --watch styles/styles.scss:dist/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonly/hangman-proto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonly/hangman-proto/issues"
+  },
+  "homepage": "https://github.com/jasonly/hangman-proto"
+}
