@@ -1,33 +1,36 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+// @import "reset";
+@import "colors";
+@import "fonts";
+@import "setup";
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
+@import "hangman";
 
-.work-board {
-  margin:  0 auto;
-  width:  400px;
-  display:  flex;
-  flex-direction: column;
-}
+.section-title {}
 
-.board {
-  display: flex;
-  justify-content: center;
-}
+.section-game-board {
 
-.countdown-clock {
-  height:  100px;
-  width:  200px;
-  margin: 0 auto;
-  border: 1px solid gray;
 }
+// .work-board {
+//   margin: 0 auto;
+//   width: 400px;
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.letter-box {
-  background-color: coral;
-  height: 20px;
-  width: 20px;
-  margin: 10px;
-}
+// .board {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .countdown-clock {
+//   padding: 10px 40px;
+//   margin: 0 auto;
+//   border: 1px solid gray;
+// }
+
+// .letter-box {
+//   background-color: coral;
+//   height: 20px;
+//   width: 20px;
+//   margin: 10px;
+// }

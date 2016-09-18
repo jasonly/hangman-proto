@@ -1,0 +1,13 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.letter-box {
+  background-color: $aqua;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin: 10px;
+}

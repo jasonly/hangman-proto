@@ -1,0 +1,19 @@
+body {
+  font: 100% $font-stack;
+  background-color: $background;
+}
+
+section {
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  &.center-content {
+    justify-content: center;
+  }
+
+  &.v-center {
+    align-items: center;
+  }
+}
