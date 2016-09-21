@@ -54,7 +54,7 @@ var Hangman = function () {
   var _listeners = function() {
     var boxes;
 
-    _setWord();
+    // _setWord();
     _makeBoxes();
 
     boxes = document.querySelectorAll('.letter-box');
@@ -65,6 +65,7 @@ var Hangman = function () {
   };
 
   return {
-    init: _listeners
+    init: _listeners,
+    answer: _setWord
   };
 };

@@ -1,6 +1,8 @@
-var timer = new Timer();
+  var timer = new Timer();
 var game = new Hangman();
+var answer = game.answer();
 
-// timer.setTime(10);
-// timer.init();
 game.init();
+
+timer.setTime(5);
+timer.init(answer);

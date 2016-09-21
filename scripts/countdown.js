@@ -10,7 +10,8 @@ var Timer = function () {
     document.querySelector('.countdown-clock').innerHTML = _time;
   };
 
-  var _setCountdown = function() {
+  var _setCountdown = function(answer) {
+    _answer = answer;
     _countdown = setInterval(_loseTime, 1000);
   };
 
@@ -21,10 +22,45 @@ var Timer = function () {
       clearInterval(_countdown);
 
       _scrub();
-      alert('OUT OF TIME');
+
+      alert('Out of time');
+      _fillAnswer(answer);
+    } else {
+      
+      if(_checkBoxes()) {
+        clearInterval(_countdown);
+        alert('YAY! You win!');
+      }
     }
 
     _appendSeconds();
+  };
+
+  var _fillAnswer = function(word) {
+    var letters = document.querySelectorAll('.letter-box');
+
+    letters.forEach(function(letter, index) {
+      if(letter.innerText === '') {
+        letter.innerText = word[letter.dataset.loc];
+      }
+    });
+
+    return letters;
+  };
+
+  var _checkBoxes = function() {
+    // just want to check if letter-box is all filled
+    var letters = document.querySelectorAll('.letter-box');
+    var completed = true;
+
+    for (var i = 0; i < letters.length; i++) {
+
+      if (letters[i].innerText === '') {
+        completed = false;
+      }
+    }
+
+    return completed;
   };
 
   var _scrub = function() {
