@@ -4,33 +4,10 @@
 @import "setup";
 
 @import "hangman";
+@import "countdown";
 
 .section-title {}
 
 .section-game-board {
 
 }
-// .work-board {
-//   margin: 0 auto;
-//   width: 400px;
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .board {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .countdown-clock {
-//   padding: 10px 40px;
-//   margin: 0 auto;
-//   border: 1px solid gray;
-// }
-
-// .letter-box {
-//   background-color: coral;
-//   height: 20px;
-//   width: 20px;
-//   margin: 10px;
-// }

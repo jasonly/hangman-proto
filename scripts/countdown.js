@@ -4,6 +4,8 @@ var Timer = function () {
 
   var _setTime = function(n) {
     _time = n + 1;
+
+    return _time;
   };
 
   var _appendSeconds = function() {
@@ -54,7 +56,6 @@ var Timer = function () {
     var completed = true;
 
     for (var i = 0; i < letters.length; i++) {
-
       if (letters[i].innerText === '') {
         completed = false;
       }
