@@ -6,6 +6,10 @@
 @import "hangman";
 @import "countdown";
 
+body {
+  background-color: $foreground;
+}
+
 .section-title {}
 
 .section-game-board {
