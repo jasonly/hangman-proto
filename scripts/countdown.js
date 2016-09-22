@@ -40,11 +40,11 @@ var Timer = function () {
 
   // This would be a cool scoping question
   // it would need to not go through every letter
-  var _delayInput = function(letter, index, word){
+  var _delayInput = function(letter, time, word){
     setTimeout(function(){
       letter.classList.add('missed');
       letter.innerText = word[letter.dataset.loc];
-    }, index * 1000);
+    }, time * 1000);
   };
 
   var _fillAnswer = function(word) {
