@@ -10,3 +10,5 @@ If you don't already, you'll need to install [SASS](http://sass-lang.com/install
 npm run dist
 npm run build
 ```
+
+Enjoy bug city!
