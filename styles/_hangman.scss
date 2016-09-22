@@ -19,3 +19,19 @@
     color: $yellow;
   }
 }
+
+.letter {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  text-transform: uppercase;
+  
+  &.letter-hidden {
+    visibility: hidden;
+  }
+
+  &.letter-visible {
+    visibility: initial;
+  }
+}

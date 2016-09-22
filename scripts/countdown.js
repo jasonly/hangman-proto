@@ -25,13 +25,13 @@ var Timer = function () {
 
       _scrub();
 
-      alert('Out of time');
+      // alert('Out of time');
       _fillAnswer(answer);
     } else {
       
       if(_checkBoxes()) {
         clearInterval(_countdown);
-        alert('YAY! You win!');
+        // alert('YAY! You win!');
       }
     }
 

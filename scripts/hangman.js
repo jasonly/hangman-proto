@@ -10,6 +10,7 @@ var Hangman = function () {
   var _dictionary = ['fatty', 'club', 'eat', 'food'];
   var _word = '';
   var _wordArr = [];
+  var _wrongGuesses = [];
 
   // ideally I'll set it to a random word
   var _setWord = function() {
@@ -74,47 +75,53 @@ var Hangman = function () {
     });
   };
 
+  var _toggleWrongLetter = function(letter) {
+    var alphabetLetterNode = document.querySelectorAll('[data-alpha="' + letter + '"]')[0];
+
+    alphabetLetterNode.classList.remove('letter-hidden');
+    alphabetLetterNode.classList.add('letter-visible');
+  };
+
   var _compareKeypress = function(word, keypress) {
     var field = document.querySelectorAll('.letter-box');
     var index = _getAllIndexes(word, keypress);
 
     if (word[index] === keypress) {
       _placeLetter(index, field, keypress);
-    }
-
-    if (Array.isArray(index)) {
-      // console.log(...index);
+    } else if(Array.isArray(index) && index.length >= 2) {
       for(var i = 0; i < index.length; i++) {
         _placeLetter(index[i], field, keypress);
       }
+    } else {
+      // lose condition
+      if(_wrongGuesses.length >= 3) {
+        console.log('you lost');
+      }
+
+      if(_wrongGuesses.indexOf(keypress) === -1) {
+        _wrongGuesses.push(keypress);
+        _toggleWrongLetter(keypress);
+      }
     }
+  };
+
+  // modal popup that ends the game
+  var _endGame = function() {
+
   };
 
   var _keypressHandler = function (e) {
     var keyPress = e.key.toLowerCase();
     var allowed = ' a b c d e f g h i j k l m n o p q r s t u v w x y z '; 
 
-    // TODO: Need to keep track of incorrect keypresses
-
     if(allowed.indexOf(keyPress) !== -1) {
       _compareKeypress(_word, keyPress);
     }
   };
 
-  // you need to check if the letter is correct and at the right location/index
-  // click on div prompt a letter then go through logic
   var _listeners = function() {
-    // var boxes;
-
     _makeBoxes();
     window.addEventListener("keydown", _keypressHandler);
-
-
-    // boxes = document.querySelectorAll('.letter-box');
-
-    // boxes.forEach(function(box) {
-    //   box.addEventListener('click', _eventCheck);
-    // });
   };
 
   return {
