@@ -38,12 +38,26 @@ var Timer = function () {
     _appendSeconds();
   };
 
+  // This would be a cool scoping question
+  // it would need to not go through every letter
+  var _delayInput = function(letter, index, word){
+    setTimeout(function(){
+      letter.classList.add('missed');
+      letter.innerText = word[letter.dataset.loc];
+    }, index * 1000);
+  };
+
   var _fillAnswer = function(word) {
     var letters = document.querySelectorAll('.letter-box');
+    var correct = 0;
 
     letters.forEach(function(letter, index) {
-      if(letter.innerText === '') {
-        letter.innerText = word[letter.dataset.loc];
+      if (letter.innerText === '') {
+        index = index - correct;
+
+        _delayInput(letter, index, word);
+      } else {
+        correct++;
       }
     });
 
@@ -51,7 +65,6 @@ var Timer = function () {
   };
 
   var _checkBoxes = function() {
-    // just want to check if letter-box is all filled
     var letters = document.querySelectorAll('.letter-box');
     var completed = true;
 
