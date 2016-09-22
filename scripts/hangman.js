@@ -94,6 +94,8 @@ var Hangman = function () {
     var keyPress = e.key.toLowerCase();
     var allowed = ' a b c d e f g h i j k l m n o p q r s t u v w x y z '; 
 
+    // TODO: Need to keep track of incorrect keypresses
+
     if(allowed.indexOf(keyPress) !== -1) {
       _compareKeypress(_word, keyPress);
     }

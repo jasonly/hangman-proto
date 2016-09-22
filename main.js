@@ -4,5 +4,5 @@ var answer = game.answer();
 
 game.init();
 
-// timer.setTime(5);
-// timer.init(answer);
+timer.setTime(5);
+timer.init(answer);
