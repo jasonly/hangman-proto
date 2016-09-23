@@ -11,16 +11,36 @@ var Winlose = function() {
 
     body.appendChild(_overlay);
 
-    whatHappened();
+    whatHappened('YOU WIN!!!');
+    playAgainButton();
   };
 
-  var whatHappened = function() {
+  // function that creates the the content for the overlay-content
+  var whatHappened = function(str) {
     var _title = document.createElement('h1');
     var _overlayContent = document.querySelector('.overlay-content');
 
-    _title.innerHTML = 'OH?';
+    _title.innerHTML = str;
+    _title.classList.add('title');
 
     _overlayContent.appendChild(_title);
+
+    return _overlayContent;
+  };
+
+  var playAgainButton = function() {
+    var _yes = document.createElement('button');
+    var _no = document.createElement('button');
+    var _question = document.createElement('p');
+    var _overlayContent = document.querySelector('.overlay-content');
+
+    _question.innerHTML = 'Do you want to play again?';
+    _yes.innerHTML = 'YES';
+    _no.innerHTML = 'NO';
+
+    _overlayContent.appendChild(_question);
+    _overlayContent.appendChild(_yes);
+    _overlayContent.appendChild(_no);
 
     return _overlayContent;
   };
