@@ -18,3 +18,25 @@ section {
     align-items: center;
   }
 }
+
+button {
+  background-color: $comment;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: $selection;
+}
+
+button:active {
+  background-color: $selection;
+  transform: translateY(2px);
+}
