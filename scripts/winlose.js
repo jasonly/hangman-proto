@@ -1,17 +1,17 @@
-var Winlose = function () {
+var Winlose = function() {
   var createOverlay = function() {
-      var _overlay = document.createElement('div');
-      var _overlayContent = document.createElement('div');
-      var body = document.querySelector('body');
+    var _overlay = document.createElement('div');
+    var _overlayContent = document.createElement('div');
+    var body = document.querySelector('body');
 
-      _overlay.classList.add('overlay');
-      _overlayContent.classList.add('overlay-content');
+    _overlay.classList.add('overlay');
+    _overlayContent.classList.add('overlay-content');
 
-      _overlay.appendChild(_overlayContent);
+    _overlay.appendChild(_overlayContent);
 
-      body.appendChild(_overlay);
+    body.appendChild(_overlay);
 
-      whatHappened();
+    whatHappened();
   };
 
   var whatHappened = function() {
