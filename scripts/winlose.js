@@ -31,16 +31,20 @@ var Winlose = function() {
   var playAgainButton = function() {
     var _yes = document.createElement('button');
     var _no = document.createElement('button');
+    var _buttonContainer = document.createElement('div');
     var _question = document.createElement('p');
     var _overlayContent = document.querySelector('.overlay-content');
+
+    _buttonContainer.classList.add('button-container');
 
     _question.innerHTML = 'Do you want to play again?';
     _yes.innerHTML = 'YES';
     _no.innerHTML = 'NO';
 
     _overlayContent.appendChild(_question);
-    _overlayContent.appendChild(_yes);
-    _overlayContent.appendChild(_no);
+    _buttonContainer.appendChild(_yes);
+    _buttonContainer.appendChild(_no);
+    _overlayContent.appendChild(_buttonContainer);
 
     return _overlayContent;
   };
